@@ -5,4 +5,4 @@ venv_enchatv03/
 config.env
 record_manager_cache.sql
 .DS_Store
-myenv/
+venv
