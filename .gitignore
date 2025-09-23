@@ -1,0 +1,8 @@
+__pycache__/
+.files/
+venv_enchatv03/
+.env
+config.env
+record_manager_cache.sql
+.DS_Store
+myenv/
