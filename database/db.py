@@ -18,3 +18,18 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 # Create base class for declarative models
 Base = declarative_base() 
+
+
+from sqlalchemy import text
+from database.db import engine
+
+def test_connection():
+    try:
+        with engine.connect() as conn:
+            result = conn.execute(text("SELECT 1"))
+            print("✅ Database connected successfully:", result.scalar())
+    except Exception as e:
+        print("❌ Database connection failed:", str(e))
+
+if __name__ == "__main__":
+    test_connection()
